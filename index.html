@@ -46,7 +46,7 @@
 				<div class="container">
 					<header>
 						<h2>Minhas habilidades e conhecimentos</h2>
-						<p>Sou Desenvolvedor Front-end | HTML | CSS | JavaScript. </p>
+						<p>Sou Desenvolvedor Front-end | HTML | CSS | JavaScript | Bootstrap | jQuery | SASS</p>
 					</header>
 					<div class="row aln-center">
 						<div class="col-4 col-6-medium col-12-small">
@@ -59,21 +59,21 @@
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
 								<span class="icon solid featured fa-camera-retro"></span>
-								<h3>Lorem dolor tempus</h3>
-								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+								<h3>UX & UI</h3>
+								<p>Em todos projetos tenho foco na experiência do usuário. Por isso, sempre elaboro interfaces com design responsivo, simples e agradável. Tenho conhecimentos avançados em Photoshop e CorelDraw.</p>
 							</section>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
 								<span class="icon featured fa-thumbs-up"></span>
-								<h3>Feugiat posuere</h3>
+								<h3>Soluções simples & Efetivas</h3>
 								<p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
 							</section>
 						</div>
 					</div>
 					<footer>
 						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#portfolio" class="button large scrolly">See some of my recent work</a>
+						<a href="#portfolio" class="button large scrolly">Confira meus últimos projetos</a>
 					</footer>
 				</div>
 			</article>
@@ -130,8 +130,8 @@
 						</div>
 					</div>
 					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
-						<a href="#contact" class="button large scrolly">Get in touch with me</a>
+						<p>Agora que conhece meu trabalho, vamos desenvolver algo juntos?</p>
+						<a href="#contact" class="button large scrolly">Entre em contato comigo</a>
 					</footer>
 				</div>
 			</article>
@@ -140,63 +140,66 @@
 			<article id="contact" class="wrapper style4">
 				<div class="container medium">
 					<header>
-						<h2>Have me make stuff for you.</h2>
-						<p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p>
+						<h2>Já vai?</h2>
+						<p>Foi uma honra ter você por aqui. Que tal agora você me enviar uma mensagem? </p>
 					</header>
 					<div class="row">
 						<div class="col-12">
-							<form method="post" action="mailto:lucasmotoso@gmail.com">
+							<form action="https://postmail.invotes.com/send" method="post" id="email_form">
 								<div class="row">
 									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="name" placeholder="Name" />
+										<input type="text" name="name" id="name" placeholder="Nome" />
 									</div>
 									<div class="col-6 col-12-small">
 										<input type="text" name="email" id="email" placeholder="Email" />
 									</div>
 									<div class="col-12">
-										<input type="text" name="subject" id="subject" placeholder="Subject" />
+										<input type="text" name="subject" placeholder="Assunto" />
 									</div>
 									<div class="col-12">
-										<textarea name="message" id="message" placeholder="Message"></textarea>
+										<textarea name="text" placeholder="Mensagem"></textarea>
+										<input type="hidden" name="access_token" value="w6y4z5wzehovdhjy6t9fuh33" />
+									  <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+									  <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
 									</div>
 									<div class="col-12">
 										<ul class="actions">
-											<li><input type="submit" value="Send Message" /></li>
-											<li><input type="reset" value="Clear Form" class="alt" /></li>
+											<input id="submit_form" type="submit" value="Enviar" />
+											<li><input type="reset" value="Limpar" class="alt" /></li>
 										</ul>
 									</div>
 								</div>
 							</form>
+
+							<script>
+								let submitButton = document.getElementById("submit_form");
+								let form = document.getElementById("email_form");
+								form.addEventListener("submit", function (e) {
+									setTimeout(function() {
+										submitButton.value = "Sending...";
+										submitButton.disabled = true;
+										alert('Obrigado pela mensagem, retornarei em breve!')
+									}, 1);
+								});
+							</script> 
+							
+
 						</div>
 						<div class="col-12">
 							<hr />
-							<h3>Find me on ...</h3>
+							<h3>Me encontre no ...</h3>
 							<ul class="social">
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<!--
-								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
-								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
-								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
-								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
-								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
-								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
-								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
-								-->
+								<li><a href="https://www.linkedin.com/in/lucas-motoso-248586119/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/lucasmotoso" class="icon brands fa-github"><span class="label">Github</span></a></li>
+								<li><a href="https://www.facebook.com/lucasmathozzo/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/lucas_mathozzo/" class="icon brands fa-instagram"><span></span></a></li>
 							</ul>
 							<hr />
 						</div>
 					</div>
 					<footer>
 						<ul id="copyright">
-							<li>&copy; Lucas Motoso. Todos os direitos reservados.</li>
+							<li>Desenvolvido por &copy;Lucas Motoso. Todos os direitos reservados.</li>
 						</ul>
 					</footer>
 				</div>
