@@ -23,7 +23,9 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	user-select: none;
 	vertical-align: baseline;}
+	
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -164,7 +166,7 @@ input, select, textarea {
 	}
 
 	h1 {
-		font-size: 3.25em;
+		font-size: 2.85em;
 		letter-spacing: -0.025em;
 		font-weight: 300;
 	}
